@@ -1,0 +1,259 @@
+/* General */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+#root {
+  --text-color: white;
+  --text-color-placeholder: rgb(228, 228, 228);
+  --background-color: #282a36;
+  --popup-background-color: #21232c;
+  --border-color: #202022;
+  --nav-background: #373a4b;
+  --side-background: #44475a;
+  --btn-active-hover: #8b8b8b93;
+  --selected-background: #bd93f9;
+  --app-title-color: #bd93f9;
+  --description-background-color: rgba(0, 0, 0, 0.103);
+  --text-field-background-color: #bd93f9;
+
+  /* status colors */
+  --error-color: #ff79c6;
+  --warning-color: #ffb86c;
+  --trying-color: #bd93f9;
+  --inactive-color: #6272a4;
+  --active-color: #50fa7b;
+}
+
+* {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+
+body {
+  color: var(--text-color);
+  height: 100vh;
+  min-width: 100%;
+}
+
+/* Nav Bar */
+.nav-bar {
+  color: var(--text-color);
+  background-color: var(--nav-background);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--border-color);
+}
+
+.nav-bar .header {
+  width: 100%;
+  height: 50%;
+  padding: 2px 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--background-color);
+}
+
+.nav-bar .header .title {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--app-title-color);
+}
+
+.nav-bar .body {
+  width: 100%;
+  height: 50%;
+  padding: 2px 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-bar .body .options {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: flex-start;
+}
+
+.nav-bar .body .status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar .options button {
+  background-color: var(--app-title-color);
+  margin: 0px 4px;
+  width: 100px;
+  height: 25px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px 8px;
+  transition: all 150ms ease-in-out;
+}
+
+.nav-bar .options button:hover {
+  background-color: var(--inactive-color);
+}
+
+/* Main Panel */
+.main-panel {
+  background-color: var(--background-color);
+  height: 100%;
+}
+
+/* Tool Panel */
+.tools-panel {
+  color: var(--text-color);
+  background-color: var(--side-background);
+  height: 100%;
+  padding: 2px;
+  border: 1px solid var(--border-color);
+  border-top: 0px;
+}
+
+.tool-item {
+  padding-left: 5px;
+}
+
+.tool-item button {
+  background-color: rgba(0, 0, 0, 0);
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  /* border-radius: 0px; */
+}
+
+.tool-item button:hover {
+  background-color: var(--btn-active-hover);
+}
+
+/* Props Panel */
+.props-panel {
+  color: var(--text-color);
+  background-color: var(--side-background);
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: flex-start;
+  border: 1px solid var(--border-color);
+  border-top: 0px;
+}
+
+.props-panel .header {
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+  background-color: var(--selected-background);
+  padding: 6px;
+  border: 0px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.props-panel .body {
+  height: 100%;
+  width: 100%;
+}
+
+.props-description {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+
+.props-description .head {
+  background-color: var(--description-background-color);
+  width: 100%;
+  padding: 3px 6px 2px 6px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.props-description .description {
+  background-color: var(--description-background-color);
+  padding: 3px 6px 2px 6px;
+  text-align: left;
+  width: 100%;
+  font-size: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.prop-text-field {
+  background-color: var(--description-background-color);
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.prop-text-field label {
+  font-weight: bold;
+  padding: 2px 4px 0px 4px;
+}
+
+.prop-text-field input {
+  padding: 4px;
+  margin: 4px;
+  outline: 0;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--text-field-background-color);
+}
+
+.prop-text-field input::placeholder {
+  color: var(--text-color-placeholder);
+}
+
+/* Pop up style */
+.pop-up {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: #0000006c;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pop-up .container {
+  width: 700px;
+  height: 600px;
+  background-color: var(--popup-background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+.pop-up .container img {
+  margin: 16px;
+  border-radius: 8px;
+}
+
+.pop-up .container .description {
+  color: var(--text-color);
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
