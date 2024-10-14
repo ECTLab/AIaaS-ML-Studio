@@ -76,3 +76,7 @@ To dockerize project and deploy it you should follow these steps:
         build_n_deploy.bat
     -linux:
         build_n_deploy.bash
+
+### Developed by Pouya Mohammadi
+### Under Dr. Seyed Ahmad Javadi Supervision.
+### AUT - Oct. 2024
