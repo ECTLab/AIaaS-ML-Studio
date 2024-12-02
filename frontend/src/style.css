@@ -11,6 +11,7 @@
   --side-background: #44475a;
   --btn-active-hover: #8b8b8b93;
   --selected-background: #bd93f9;
+  --selected-background2: #a86aff98;
   --app-title-color: #bd93f9;
   --description-background-color: rgba(0, 0, 0, 0.103);
   --text-field-background-color: #bd93f9;
@@ -125,6 +126,7 @@ body {
 
 .tool-item {
   padding-left: 5px;
+  margin-bottom: 4px;
 }
 
 .tool-item button {

@@ -49,8 +49,8 @@ const ToolItem = ({ item = null, url = "/" }) => {
     <div id={"tool-item-btn-" + item.id} className="tool-item">
       <button
         style={{
-          background:
-            expandMenu && item.items ? "var(--selected-background)" : "",
+          background: item.items ? "" : "var(--selected-background2)",
+          cursor: item.items ? "pointer" : "grab",
         }}
         className="btn btn-dark"
         onClick={() => {
